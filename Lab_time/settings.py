@@ -1,0 +1,317 @@
+﻿SCREEN_W = 1044
+SCREEN_H = 850
+FPS = 60
+
+BG_COLOR = (18, 18, 22)
+
+# Room floor colors (used in Room.bg_color() and door openings)
+ROOM_COLOR_NORMAL = (28, 28, 34)
+ROOM_COLOR_START = (40, 40, 60)
+ROOM_COLOR_BOSS = (80, 30, 30)
+ROOM_COLOR_TREASURE = (60, 60, 30)
+ROOM_COLOR_SHOP = (30, 60, 30)
+ROOM_COLOR_SECRET = (60, 30, 60)
+
+# Player
+PLAYER_SPEED = 260.0
+PLAYER_SIZE = 40
+PLAYER_COLOR = (230, 230, 240)
+
+# Room
+ROOM_MARGIN = 80
+WALL_COLOR = (70, 70, 80)
+OBST_COLOR = (110, 110, 130)
+
+# Enemy
+ENEMY_SPEED = 140.0
+ENEMY_SIZE = 38
+ENEMY_COLOR = (210, 90, 90)
+ENEMY_HP = 40
+
+HPBAR_BG = (40, 40, 48)
+HPBAR_FG = (90, 220, 120)
+HPBAR_H = 6
+
+# Melee weapons
+WEAPONS = {
+    "club": {"damage": 10, "range": 55, "windup": 0.05, "active": 0.08, "cooldown": 0.22},
+    "bat": {"damage": 14, "range": 75, "windup": 0.07, "active": 0.10, "cooldown": 0.30},
+    "hammer": {"damage": 22, "range": 95, "windup": 0.12, "active": 0.12, "cooldown": 0.50},
+}
+BAT_KNOCKBACK = 260.0
+BAT_KNOCKBACK_TIME = 0.12
+
+BREAKABLE_WALL_HP = 40
+BREAKABLE_WALL_COLOR = (95, 95, 115)
+
+HITBOX_CLUB_THICKNESS = 26
+HITBOX_BAT_THICKNESS = 62
+HITBOX_HAMMER_THICKNESS = 38
+HITBOX_COLOR = (255, 255, 255)
+
+# Projectiles (Q/R)
+PROJECTILE_SPEED = 520.0
+PROJECTILE_SIZE = 12
+PROJECTILE_COLOR = (120, 180, 255)
+PROJECTILE_TTL = 1.2
+
+TRAIL_COLOR = (90, 140, 220)
+TRAIL_POINTS = 10
+
+# Q ability
+Q_COOLDOWN = 1.0
+Q_DAMAGE = 15
+Q_IMPROVED_DAMAGE = 15
+Q_IMPROVED_PIERCING = True
+Q_IMPROVED_TRAIL = True
+
+# E ability
+E_COOLDOWN = 6.0
+ULT_RADIUS = 140
+ULT_DAMAGE = 35
+ULT_COLOR = (255, 220, 100)
+
+# R ability
+R_COOLDOWN = 4.0
+R_BULLETS = 8
+R_DAMAGE = 6
+R_INTERVAL = 0.06
+R_STORM_BULLETS = 15
+R_STORM_DAMAGE = 6
+R_STORM_INTERVAL = 0.04
+
+# F ability
+F_COOLDOWN = 7.0
+F_SHELLS = 9
+F_DAMAGE = 10
+F_RADIUS = 55
+F_MARK_TIME = 0.55
+F_SPAWN_RADIUS = 220
+
+F_BIG_COOLDOWN = 8.0
+F_BIG_DAMAGE = 28
+F_BIG_RADIUS = 95
+F_BIG_MARK_TIME = 0.75
+F_BIG_STUN = 1.25
+
+SHADOW_COLOR = (20, 20, 24)
+IMPACT_COLOR = (255, 180, 120)
+
+# Map / rooms
+MAP_W = 9
+MAP_H = 8
+START_CELL = (MAP_H // 2) * MAP_W + (MAP_W // 2)  # map center
+
+ROOMS_MIN = 10
+ROOMS_MAX = 14
+ROOM_CHANGE_LOCK = 0.25
+
+# Doors
+DOOR_TRIGGER_PAD = 6
+DOOR_SPAWN_OFFSET = 70
+
+# Minimap
+MINIMAP_CELL = 12
+MINIMAP_GAP = 3
+MINIMAP_X = 820
+MINIMAP_Y = 20
+
+MINIMAP_COLOR_BG = (20, 20, 26)
+MINIMAP_COLOR_BORDER = (90, 90, 105)
+
+MINIMAP_COLOR_UNKNOWN = (35, 35, 45)
+MINIMAP_COLOR_VISITED = (80, 80, 95)
+MINIMAP_COLOR_CURRENT = (245, 245, 255)
+
+MINIMAP_TYPE_COLORS = {
+    "start": (120, 160, 255),
+    "boss": (220, 80, 80),
+    "treasure": (220, 210, 90),
+    "shop": (90, 220, 120),
+    "secret": (190, 90, 190),
+    "normal": (120, 120, 140),
+}
+
+# Walls / doors
+WALL_THICKNESS = 6
+DOOR_SIZE = 140
+DOOR_ZONE_DEPTH = 26
+
+# Player HP
+PLAYER_MAX_HP = 100
+PLAYER_IFRAMES = 0.45
+
+# Map objects
+ROCK_COLOR = (130, 130, 150)
+CRATE_COLOR = (160, 130, 90)
+SPIKES_COLOR = (200, 200, 220)
+
+CRATE_HP = 20
+SPIKES_DAMAGE = 12
+ROCK_HP = 60
+
+# Enemy AI
+AI_GRID = 28
+AI_REPATH_TIME = 0.25
+AI_REPATH_PLAYER_DIST = 80
+AI_SEPARATION_RADIUS = 48
+AI_SEPARATION_FORCE = 120.0
+AI_STUCK_TIME = 0.7
+AI_STUCK_MIN_MOVE = 6.0
+
+AI_LOS_STEP = 8
+AI_DIRECT_CHASE_DIST = 260
+AI_SHOOT_RANGE = 380
+AI_SHOOT_MIN_RANGE = 160
+AI_SHOOT_COOLDOWN = 0.9
+AI_STRAFE_FORCE = 0.65
+
+# Enemy bullets
+ENEMY_BULLET_SPEED = 360.0
+ENEMY_BULLET_SIZE = 10
+ENEMY_BULLET_TTL = 2.0
+ENEMY_BULLET_DAMAGE = 8
+ENEMY_BULLET_COLOR = (255, 140, 140)
+
+# Seeds
+FORCE_SEED = 1234
+
+# Floor portal (boss exit)
+NEXT_FLOOR_PORTAL_SIZE = 64
+NEXT_FLOOR_PORTAL_COLOR = (120, 255, 180)
+NEXT_FLOOR_PORTAL_OUTLINE = (0, 0, 0)
+NEXT_FLOOR_HINT_COLOR = (235, 235, 245)
+NEXT_FLOOR_REQUIRES_KEY = True     # True = press Enter, False = auto-transition
+NEXT_FLOOR_KEY = None              # None -> Enter, else pygame.K_...
+
+# Difficulty caps
+DIFF_HP_CAP = 3.0
+DIFF_DMG_CAP = 2.5
+DIFF_SPEED_CAP = 1.6
+
+# Boss Phase 1
+BOSS_SIZE = 72
+BOSS_COLOR = (180, 60, 60)
+BOSS_RING_COLOR = (255, 190, 120)
+
+BOSS_HP_BASE = 260
+
+BOSS_SPEED = 135.0
+
+# Dash
+BOSS_DASH_WINDUP = 0.45     # telegraph before dash
+BOSS_DASH_TIME = 0.22       # dash duration
+BOSS_DASH_SPEED = 760.0
+BOSS_DASH_CD = 3.4
+
+# Shooting
+BOSS_BULLET_SPEED = 420.0
+BOSS_BULLET_DAMAGE = 9
+
+BOSS_BURST_BULLETS = 6
+BOSS_BURST_SPREAD_RAD = 0.18
+BOSS_BURST_CD = 3.25
+
+BOSS_RING_BULLETS = 10
+BOSS_ENRAGE_RING_BULLETS = 16
+BOSS_RING_CD = 4.2
+
+# Enrage
+BOSS_ENRAGE_HP_RATIO = 0.45
+BOSS_ENRAGE_SPEED_MULT = 1.15
+BOSS_ENRAGE_CD_MULT = 0.85
+
+# Idle pacing
+BOSS_IDLE_TIME = 0.35
+
+# Contact damage
+BOSS_CONTACT_DAMAGE = 10
+BOSS_CONTACT_CD = 0.55
+BOSS_DASH_DAMAGE = 22
+
+# Boss summon
+BOSS_SUMMON_CD = 5.0
+BOSS_SUMMON_COUNT = 2
+BOSS_SUMMON_MAX_ALIVE = 5      # total mob limit in boss room
+BOSS_SUMMON_RADIUS = 160       # spawn radius around boss
+
+# Debug
+DEBUG_BOSS = True
+DEBUG_BOSS_VECTORS = True
+
+# Boss wall avoidance
+BOSS_WALL_AVOID_DIST = 140        # px: wall influence zone
+BOSS_WALL_AVOID_FORCE = 1.45      # wall repulsion force
+BOSS_CENTER_PULL_DIST = 0         # 0 = off; else px threshold to pull toward center
+BOSS_CENTER_PULL_FORCE = 0.40     # center pull strength (if enabled)
+
+# AI wall avoidance / stuck
+AI_WALL_AVOID_DIST = 140       # px wall influence zone
+AI_WALL_AVOID_FORCE = 1.25     # repulsion force
+AI_STUCK_CHECK = 0.55          # stuck check window (sec)
+AI_STUCK_EPS = 6.0             # min movement in window (px)
+AI_ESCAPE_TIME = 0.22          # escape duration (sec)
+
+# Pickups / Rewards
+PICKUP_SIZE = 44
+PICKUP_COLOR = (240, 210, 120)
+PICKUP_OUTLINE = (0, 0, 0)
+
+REWARD_HEAL = 25
+REWARD_MAXHP_ADD = 20
+
+# Contact damage (enemies)
+ENEMY_CONTACT_DAMAGE = 6
+ENEMY_CONTACT_CD = 0.55
+
+# New enemies
+TANK_SIZE = 54
+TANK_HP = 120
+TANK_SPEED = 85.0
+TANK_COLOR = (160, 90, 90)
+TANK_CONTACT_DAMAGE = 12
+
+DASHER_SIZE = 40
+DASHER_HP = 55
+DASHER_SPEED = 120.0
+DASHER_WINDUP = 0.35
+DASHER_DASH_TIME = 0.22
+DASHER_DASH_SPEED = 680.0
+DASHER_CD = 2.0
+DASHER_COLOR = (210, 120, 80)
+
+SUMMONER_SIZE = 40
+SUMMONER_HP = 45
+SUMMONER_SPEED = 110.0
+SUMMONER_SUMMON_CD = 4.0
+SUMMONER_MAX_MINIONS = 3
+SUMMONER_COLOR = (160, 90, 160)
+
+# Debug
+DEBUG_AI = False               # toggle with F1 (see main.py)
+
+SPRITE_FRAME_W = 32
+SPRITE_FRAME_H = 32
+SPRITE_SCALE = 2
+SPRITE_OFFSET_Y = 6
+
+PLAYER_SPRITE_SCALE = 0.25
+PLAYER_SPRITE_OFFSET_Y = 10
+PLAYER_ANIM_FPS = 14
+
+LAYER_HIT_FPS = 12
+PLAYER_HIT_FX_SCALE = 0.35
+PLAYER_HIT_FX_OFFSET_X = 0
+PLAYER_HIT_FX_OFFSET_Y = 0
+PLAYER_HIT_FX_SIDE_INVERTED = True
+DEBUG_MELEE_HITBOX = True
+
+DEBUG_WALLS = False
+
+ROOM_WALLS_PNG = "assets/sprites/room/room_walls.png"
+
+# Floor rect in source room PNG (px) — align green frame to white zone
+ROOM_FLOOR_RECT_LOCAL = (0, 0, 730, 416)
+
+LAYOUT_FILL_RATIO = 0.80   # min 80% floor coverage
+LAYOUT_EDGE_PAD = 10       # padding from floor edge

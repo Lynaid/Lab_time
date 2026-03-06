@@ -1,0 +1,204 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b2f281fa-774a-440d-a10a-64cc7b5560c2</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Lab_time</Name>
+    <RootNamespace>Lab_time</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="actors\enemy.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="actors\boss.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="actors\player.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="actors\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="audio\audio_manager.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="audio\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="combat\melee.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="combat\abilities.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="combat\artillery.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="combat\effects.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="combat\upgrade_defs.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="combat\upgrades.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="combat\status_effects.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="combat\projectile.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="combat\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="config\app_config.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="config\__init__.py" />
+    <Compile Include="core\sprite.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\scene.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lab_time.py" />
+    <Compile Include="main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="settings.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ui\hud.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ui\minimap.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ui\menus.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ui\upgrade_menu.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ui\__init__.py" />
+    <Compile Include="world\map_gen.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="world\layouts.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="world\tileset.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="world\pickups.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="world\objects.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="world\room.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.13</Version>
+      <Description>env (Python 3.13)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\music\" />
+    <Folder Include="assets\ambience\" />
+    <Folder Include="assets\ui\" />
+    <Folder Include="assets\sprites\" />
+    <Folder Include="assets\sfx\" />
+    <Folder Include="assets\sprites\enemies\" />
+    <Folder Include="assets\sprites\room\" />
+    <Folder Include="core\" />
+    <Folder Include="actors\" />
+    <Folder Include="combat\" />
+    <Folder Include="assets\" />
+    <Folder Include="audio\" />
+    <Folder Include="config\" />
+    <Folder Include="world\" />
+    <Folder Include="ui\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\ambience\boss.ogg" />
+    <Content Include="assets\ambience\normal.ogg" />
+    <Content Include="assets\ambience\secret.ogg" />
+    <Content Include="assets\ambience\shop.ogg" />
+    <Content Include="assets\ambience\treasure.ogg" />
+    <Content Include="assets\music\boss.mp3" />
+    <Content Include="assets\sfx\crate_break.wav" />
+    <Content Include="assets\sfx\door_open.wav" />
+    <Content Include="assets\sfx\door_travel.wav" />
+    <Content Include="assets\sfx\enemy_die.wav" />
+    <Content Include="assets\sfx\enemy_hit_1.wav" />
+    <Content Include="assets\sfx\enemy_hit_2.wav" />
+    <Content Include="assets\sfx\e_blast.wav" />
+    <Content Include="assets\sfx\f_shell.wav" />
+    <Content Include="assets\music\game.mp3" />
+    <Content Include="assets\sfx\game_over.wav" />
+    <Content Include="assets\sfx\melee.wav" />
+    <Content Include="assets\music\menu.mp3" />
+    <Content Include="assets\sfx\pause.wav" />
+    <Content Include="assets\sfx\player_hurt_1.wav" />
+    <Content Include="assets\sfx\player_hurt_2.wav" />
+    <Content Include="assets\sfx\player_hurt_3.wav" />
+    <Content Include="assets\sfx\player_hurt_4.wav" />
+    <Content Include="assets\sfx\portal_spawn.wav" />
+    <Content Include="assets\sfx\q_shot.wav" />
+    <Content Include="assets\sfx\resume.wav" />
+    <Content Include="assets\sfx\rock_break.wav" />
+    <Content Include="assets\sfx\r_shot.wav" />
+    <Content Include="assets\sfx\ui_back.wav" />
+    <Content Include="assets\sfx\ui_move.wav" />
+    <Content Include="assets\sfx\ui_select.wav" />
+    <Content Include="assets\sprites\enemies\chaser.png" />
+    <Content Include="assets\sprites\enemies\tank.png" />
+    <Content Include="assets\sprites\enemies\summoner.png" />
+    <Content Include="assets\sprites\enemies\shooter.png" />
+    <Content Include="assets\sprites\enemies\dasher.png" />
+    <Content Include="assets\sprites\enemies\turret.png" />
+    <Content Include="assets\sprites\room\Doors.png" />
+    <Content Include="assets\sprites\room\room_floor.png" />
+    <Content Include="assets\sprites\room\Rocks.png" />
+    <Content Include="assets\sprites\room\room_tiles.png" />
+    <Content Include="assets\sprites\room\room_walls.png" />
+    <Content Include="assets\ui\logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
