@@ -1,4 +1,3 @@
-```markdown
 # Lab Time
 
 Lab Time is a 2D action roguelike prototype built with **Python** and **Pygame**.  
