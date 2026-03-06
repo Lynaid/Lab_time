@@ -99,6 +99,11 @@ class MenuScene(Scene):
         logo = pygame.transform.scale(logo, (178, 179))
         screen.blit(logo, (12, 12))
 
+        # text under logo
+        font_small = pygame.font.SysFont("consolas", 18)
+        tagline = font_small.render("Wij lanceren je de toekomst in!", True, (230, 230, 240))
+        screen.blit(tagline, (12, 12 + logo.get_height() + 6))
+
         start_y = 240
         for i, opt in enumerate(self.options):
             label = opt.get("label", "")
